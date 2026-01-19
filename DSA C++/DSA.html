@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA in C++: Complete Guide for Beginners to Advanced (Job-Focused)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #2c3e50;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        code {
+            background-color: #272822;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+
+        pre {
+            background-color: #272822;
+            color: #12c31b;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .example {
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+            margin: 10px 0;
+        }
+
+        .job-tip {
+            background-color: #e8f4fd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        ul,
+        ol {
+            margin-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <a href="#intro">Introduction</a>
+        <a href="#cpp-basics">C++ Basics</a>
+        <a href="#data-structures">Data Structures</a>
+        <a href="#algorithms">Algorithms</a>
+        <a href="#advanced-topics">Advanced Topics</a>
+        <a href="#job-prep">Job Preparation</a>
+        <a href="#resources">Resources</a>
+    </div>
+
+    <div class="section" id="intro">
+        <h1>DSA in C++: Complete Guide for Beginners to Advanced (Job-Focused)</h1>
+        <p>Welcome! This is a comprehensive, easy-to-follow guide to learning Data Structures and Algorithms (DSA) using
+            C++. I've designed it to be beginner-friendly with simple explanations, code examples, and visuals. We'll
+            cover everything from basics to advanced topics, as if you're gaining 3-4 years of experience in a condensed
+            form. Focus is on job perspectives: interviews at companies like Google, Amazon, Microsoft, etc., where DSA
+            is crucial.</p>
+        <p>Why C++ for DSA? C++ is fast, efficient, and gives low-level control, which is great for understanding memory
+            and performance—key in interviews. It's widely used in competitive programming (e.g., LeetCode) and real
+            jobs (e.g., system software, games).</p>
+        <div class="job-tip">
+            <strong>Job Tip:</strong> Mastering DSA in C++ can land you roles like Software Engineer, with salaries
+            starting at ₹10-20 LPA in India (or $100K+ in US). Practice daily for 6-12 months to crack FAANG-level
+            interviews.
+        </div>
+    </div>
+
+    <div class="section" id="cpp-basics">
+        <h2>C++ Basics for DSA</h2>
+        <p>Before DSA, ensure you're comfortable with C++ fundamentals. If you're new, spend 1-2 weeks here. We'll use
+            modern C++ (C++11+).</p>
+
+        <h3>1. Variables and Data Types</h3>
+        <p>Variables store data. Common types: int, float, char, string (from &lt;string&gt;), bool.</p>
+        <div class="example">
+            <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    int age = 25;
+    string name = "Alice";
+    cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; ", Age: " &lt;&lt; age &lt;&lt; endl;
+    return 0;
+}</code></pre>
+            <p>Output: Name: Alice, Age: 25</p>
+        </div>
+
+        <h3>2. Control Structures</h3>
+        <p>If-else, loops (for, while, do-while).</p>
+        <div class="example">
+            <pre><code>for(int i = 1; i &lt;= 5; i++) {
+    cout &lt;&lt; i &lt;&lt; " ";
+}  // Output: 1 2 3 4 5</code></pre>
+        </div>
+
+        <h3>3. Functions</h3>
+        <p>Reusable code blocks.</p>
+        <div class="example">
+            <pre><code>int add(int a, int b) {
+    return a + b;
+}
+cout &lt;&lt; add(3, 4);  // 7</code></pre>
+        </div>
+
+        <h3>4. Pointers and References</h3>
+        <p>Pointers (*) point to memory addresses. Crucial for DSA like linked lists.</p>
+        <div class="example">
+            <pre><code>int x = 10;
+int* ptr = &x;
+cout &lt;&lt; *ptr;  // 10</code></pre>
+        </div>
+
+        <h3>5. STL (Standard Template Library)</h3>
+        <p>C++'s powerhouse for DSA: vectors, queues, stacks, maps, etc. Include &lt;vector&gt;, &lt;queue&gt;, etc.</p>
+        <div class="example">
+            <pre><code>#include &lt;vector&gt;
+vector&lt;int&gt; vec = {1, 2, 3};
+vec.push_back(4);  // {1,2,3,4}</code></pre>
+        </div>
+        <div class="job-tip">
+            <strong>Job Tip:</strong> Interviews test STL usage. Know time complexities: vector push_back is O(1)
+            amortized.
+        </div>
+    </div>
+
+    <div class="section" id="data-structures">
+        <h2>Data Structures</h2>
+        <p>Data structures organize data efficiently. We'll cover linear and non-linear ones, with implementations,
+            examples, and complexities.</p>
+
+        <h3>1. Arrays</h3>
+        <p>Fixed-size collection of elements. In C++, use arrays or vectors (dynamic).</p>
+        <table>
+            <tr>
+                <th>Operation</th>
+                <th>Time Complexity</th>
+            </tr>
+            <tr>
+                <td>Access</td>
+                <td>O(1)</td>
+            </tr>
+            <tr>
+                <td>Insertion (end)</td>
+                <td>O(1) for vector</td>
+            </tr>
+            <tr>
+                <td>Deletion</td>
+                <td>O(n)</td>
+            </tr>
+        </table>
+        <div class="example">
+            <pre><code>int arr[5] = {1,2,3,4,5};
+cout &lt;&lt; arr[2];  // 3</code></pre>
+            <p>Example: Find max in array.</p>
+            <pre><code>int max = arr[0];
+for(int i=1; i&lt;5; i++) if(arr[i] > max) max = arr[i];</code></pre>
+        </div>
+
+        <h3>2. Linked Lists</h3>
+        <p>Nodes with data and next pointer. Better for insertions/deletions.</p>
+        <table>
+            <tr>
+                <th>Operation</th>
+                <th>Time Complexity</th>
+            </tr>
+            <tr>
+                <td>Access</td>
+                <td>O(n)</td>
+            </tr>
+            <tr>
+                <td>Insertion</td>
+                <td>O(1) at head</td>
+            </tr>
+            <tr>
+                <td>Deletion</td>
+                <td>O(1) with pointer</td>
+            </tr>
+        </table>
+        <div class="example">
+            <pre><code>struct Node {
+    int data;
+    Node* next;
+};
+Node* head = new Node{1, nullptr};
+head->next = new Node{2, nullptr};</code></pre>
+            <p>Traverse: Node* temp = head; while(temp) { cout &lt;&lt; temp->data; temp = temp->next; }</p>
+        </div>
+        <p>Variants: Doubly Linked List (prev pointer), Circular.</p>
+
+        <h3>3. Stacks</h3>
+        <p>LIFO (Last In First Out). Use STL stack.</p>
+        <table>
+            <tr>
+                <th>Operation</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td>Push/Pop</td>
+                <td>O(1)</td>
+            </tr>
+        </table>
+        <div class="example">
+            <pre><code>#include &lt;stack&gt;
+stack&lt;int&gt; s;
+s.push(1); s.push(2);
+cout &lt;&lt; s.top();  // 2
+s.pop();</code></pre>
+            <p>Example: Balanced parentheses check.</p>
+            <pre><code>bool isBalanced(string str) {
+    stack&lt;char&gt; s;
+    for(char c : str) {
+        if(c == '(') s.push(c);
+        else if(c == ')') {
+            if(s.empty()) return false;
+            s.pop();
+        }
+    }
+    return s.empty();
+}</code></pre>
+        </div>
+
+        <h3>4. Queues</h3>
+        <p>FIFO (First In First Out). Use /queue/.</p>
+        <table>
+            <tr>
+                <th>Operation</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td>Enqueue/Dequeue</td>
+                <td>O(1)</td>
+            </tr>
+        </table>
+        <div class="example">
+            <pre><code>#include &lt;queue&gt;
+queue&lt;int&gt; q;
+q.push(1); q.push(2);
+cout &lt;&lt; q.front();  // 1
+q.pop();</code></pre>
+            <p>Example: BFS in graphs (later).</p>
+        </div>
+        <p>Variants: Deque (double-ended), Priority Queue (heap-based).</p>
+
+        <h3>5. Trees</h3>
+        <p>Hierarchical structure. Binary Tree: each node <=2 children.</p>
+                <table>
+                    <tr>
+                        <th>Traversal</th>
+                        <th>Time</th>
+                    </tr>
+                    <tr>
+                        <td>Inorder, Preorder, Postorder</td>
+                        <td>O(n)</td>
+                    </tr>
+                </table>
+                <div class="example">
+                    <pre><code>struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+};
+void inorder(TreeNode* root) {
+    if(root) {
+        inorder(root->left);
+        cout &lt;&lt; root->val;
+        inorder(root->right);
+    }
+}</code></pre>
+                    <p>Example: Height of tree.</p>
+                    <pre><code>int height(TreeNode* root) {
+    if(!root) return 0;
+    return 1 + max(height(root->left), height(root->right));
+}</code></pre>
+                </div>
+                <p>Advanced: Binary Search Tree (BST) - left < root < right. Search O(log n) average.</p>
+
+                        <h3>6. Graphs</h3>
+                        <p>Nodes and edges. Represent as adjacency list (vector of vectors).</p>
+                        <table>
+                            <tr>
+                                <th>Operation</th>
+                                <th>Time (Adj List)</th>
+                            </tr>
+                            <tr>
+                                <td>Add Edge</td>
+                                <td>O(1)</td>
+                            </tr>
+                            <tr>
+                                <td>BFS/DFS</td>
+                                <td>O(V+E)</td>
+                            </tr>
+                        </table>
+                        <div class="example">
+                            <pre><code>#include &lt;vector&gt;
+vector&lt;vector&lt;int&gt;&gt; graph(5);  // 5 nodes
+graph[0].push_back(1);  // edge 0->1</code></pre>
+                            <p>DFS Example:</p>
+                            <pre><code>void dfs(int node, vector&lt;bool&gt;& visited) {
+    visited[node] = true;
+    cout &lt;&lt; node;
+    for(int neighbor : graph[node]) {
+        if(!visited[neighbor]) dfs(neighbor, visited);
+    }
+}</code></pre>
+                        </div>
+                        <p>Variants: Directed/Undirected, Weighted.</p>
+
+                        <h3>7. Hash Tables</h3>
+                        <p>Key-value storage. Use unordered_map in C++.</p>
+                        <table>
+                            <tr>
+                                <th>Operation</th>
+                                <th>Avg Time</th>
+                            </tr>
+                            <tr>
+                                <td>Insert/Search/Delete</td>
+                                <td>O(1)</td>
+                            </tr>
+                        </table>
+                        <div class="example">
+                            <pre><code>#include &lt;unordered_map&gt;
+unordered_map&lt;string, int&gt; m;
+m["age"] = 25;
+cout &lt;&lt; m["age"];  // 25</code></pre>
+                            <p>Example: Count frequencies in array.</p>
+                            <pre><code>unordered_map&lt;int, int&gt; freq;
+for(int num : arr) freq[num]++;</code></pre>
+                        </div>
+                        <div class="job-tip">
+                            <strong>Job Tip:</strong> Hash tables are in 70% of interview questions (e.g., Two Sum on
+                            LeetCode).
+                        </div>
+    </div>
+
+    <div class="section" id="algorithms">
+        <h2>Algorithms</h2>
+        <p>Step-by-step procedures. Focus on efficiency (Big O).</p>
+
+        <h3>1. Searching</h3>
+        <p>Linear: O(n), Binary: O(log n) on sorted array.</p>
+        <div class="example">
+            <pre><code>int binarySearch(vector&lt;int&gt;& arr, int target) {
+    int low = 0, high = arr.size() - 1;
+    while(low &lt;= high) {
+        int mid = low + (high - low)/2;
+        if(arr[mid] == target) return mid;
+        else if(arr[mid] < target) low = mid + 1;
+        else high = mid - 1;
+    }
+    return -1;
+}</code></pre>
+        </div>
+
+        <h3>2. Sorting</h3>
+        <p>Bubble (O(n^2)), Merge Sort (O(n log n)), Quick Sort (O(n log n) avg).</p>
+        <div class="example">
+            <p>Merge Sort (Recursive):</p>
+            <pre><code>void mergeSort(vector&lt;int&gt;& arr, int l, int r) {
+    if(l &lt; r) {
+        int m = l + (r - l)/2;
+        mergeSort(arr, l, m);
+        mergeSort(arr, m+1, r);
+        merge(arr, l, m, r);  // merge function to combine
+    }
+}</code></pre>
+        </div>
+        <p>Use sort(arr.begin(), arr.end()); for quick sorting in practice.</p>
+
+        <h3>3. Greedy Algorithms</h3>
+        <p>Choose local optimum. Example: Coin change.</p>
+        <div class="example">
+            <pre><code>int minCoins(vector&lt;int&gt; coins, int amount) {
+    sort(coins.rbegin(), coins.rend());  // largest first
+    int count = 0;
+    for(int coin : coins) {
+        while(amount >= coin) {
+            amount -= coin;
+            count++;
+        }
+    }
+    return count;
+}</code></pre>
+        </div>
+
+        <h3>4. Dynamic Programming (DP)</h3>
+        <p>Break problems into subproblems, memoize. Key for optimization.</p>
+        <div class="example">
+            <p>Fibonacci (Memoization):</p>
+            <pre><code>vector&lt;int&gt; memo(100, -1);
+int fib(int n) {
+    if(n &lt;= 1) return n;
+    if(memo[n] != -1) return memo[n];
+    return memo[n] = fib(n-1) + fib(n-2);
+}</code></pre>
+            <p>Bottom-up (Tabulation):</p>
+            <pre><code>int fib(int n) {
+    if(n &lt;= 1) return n;
+    vector&lt;int&gt; dp(n+1);
+    dp[0] = 0; dp[1] = 1;
+    for(int i=2; i&lt;=n; i++) dp[i] = dp[i-1] + dp[i-2];
+    return dp[n];
+}</code></pre>
+        </div>
+        <p>Common: Knapsack, Longest Common Subsequence (LCS).</p>
+
+        <h3>5. Backtracking</h3>
+        <p>Try all possibilities. Example: N-Queens, Sudoku.</p>
+        <div class="example">
+            <p>Permutations of string:</p>
+            <pre><code>void permute(string& str, int l, int r) {
+    if(l == r) cout &lt;&lt; str &lt;&lt; endl;
+    else {
+        for(int i=l; i&lt;=r; i++) {
+            swap(str[l], str[i]);
+            permute(str, l+1, r);
+            swap(str[l], str[i]);  // backtrack
+        }
+    }
+}</code></pre>
+        </div>
+        <div class="job-tip">
+            <strong>Job Tip:</strong> DP is in 50% of medium-hard interviews. Practice patterns like 0/1 Knapsack.
+        </div>
+    </div>
+
+    <div class="section" id="advanced-topics">
+        <h2>Advanced Topics (3-4 Years Experience Level)</h2>
+        <p>After basics, dive into these for expertise. Assume you've practiced 1000+ problems.</p>
+
+        <h3>1. Heaps</h3>
+        <p>Complete binary tree. Use priority_queue.</p>
+        <div class="example">
+            <pre><code>#include &lt;queue&gt;
+priority_queue&lt;int&gt; maxHeap;
+maxHeap.push(10); maxHeap.push(20);
+cout &lt;&lt; maxHeap.top();  // 20</code></pre>
+            <p>Min Heap: priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; minHeap;</p>
+        </div>
+        <p>Applications: Kth largest element, median stream.</p>
+
+        <h3>2. Trie (Prefix Tree)</h3>
+        <p>For strings, efficient search/prefix.</p>
+        <div class="example">
+            <pre><code>struct TrieNode {
+    unordered_map&lt;char, TrieNode*&gt; children;
+    bool isEnd;
+};
+void insert(TrieNode* root, string word) {
+    TrieNode* node = root;
+    for(char c : word) {
+        if(!node->children[c]) node->children[c] = new TrieNode();
+        node = node->children[c];
+    }
+    node->isEnd = true;
+}</code></pre>
+        </div>
+
+        <h3>3. Segment Trees / Fenwick Trees</h3>
+        <p>For range queries (sum, min/max).</p>
+        <p>Segment Tree: O(log n) update/query.</p>
+        <div class="example">
+            <p>Basic idea: Tree array where leaves are elements, parents aggregate.</p>
+        </div>
+
+        <h3>4. Graph Algorithms</h3>
+        <ul>
+            <li>Dijkstra: Shortest path (priority_queue).</li>
+            <li>Bellman-Ford: Negative weights.</li>
+            <li>Floyd-Warshall: All pairs shortest.</li>
+            <li>Topological Sort: For DAGs.</li>
+            <li>Union-Find (Disjoint Set): For cycles, connectivity.</li>
+        </ul>
+        <div class="example">
+            <p>Union-Find:</p>
+            <pre><code>vector&lt;int&gt; parent;
+int find(int x) {
+    if(parent[x] != x) parent[x] = find(parent[x]);
+    return parent[x];
+}
+void unionSets(int x, int y) {
+    parent[find(x)] = find(y);
+}</code></pre>
+        </div>
+
+        <h3>5. String Algorithms</h3>
+        <ul>
+            <li>KMP: Pattern search O(n+m).</li>
+            <li>Rabin-Karp: Hashing-based search.</li>
+            <li>Z-Algorithm: Prefix matches.</li>
+        </ul>
+
+        <h3>6. Optimization Techniques</h3>
+        <p>Space-Time Tradeoffs, Bit Manipulation (e.g., XOR tricks), Memoization in recursion.</p>
+        <div class="example">
+            <p>Bit Mask for subsets: for(int mask=0; mask<(1&lt;&lt;n); mask++) { ... }</p>
+        </div>
+        <div class="job-tip">
+            <strong>Job Tip:</strong> Advanced topics appear in senior roles. 3-4 years exp means solving hard LeetCode
+            in 20 mins.
+        </div>
+    </div>
+
+    <div class="section" id="job-prep">
+        <h2>Job Preparation Perspective</h2>
+        <p>DSA is 60-80% of tech interviews. Here's how to prepare like a 3-4 year veteran:</p>
+        <ol>
+            <li><strong>Daily Practice:</strong> Solve 5-10 problems/day on LeetCode, Codeforces. Focus on patterns
+                (sliding window, two pointers).</li>
+            <li><strong>Mock Interviews:</strong> Use Pramp, Interviewing.io. Explain code verbally.</li>
+            <li><strong>System Design:</strong> Learn alongside DSA (e.g., Grokking System Design).</li>
+            <li><strong>Resume:</strong> Highlight DSA projects (e.g., custom graph library).</li>
+            <li><strong>Common Questions:</strong>
+                <ul>
+                    <li>Easy: Reverse linked list, Two Sum.</li>
+                    <li>Medium: LRU Cache (hash + DLL), Graph traversal.</li>
+                    <li>Hard: Median of data stream, Word Ladder.</li>
+                </ul>
+            </li>
+            <li><strong>Timeline:</strong> Months 1-3: Basics + Easy. 4-6: Medium + Patterns. 7+: Hard + Contests.</li>
+            <li><strong>Real-World:</strong> In jobs, use DSA for optimization (e.g., efficient queries in backend).
+            </li>
+        </ol>
+        <div class="job-tip">
+            <strong>Pro Tip:</strong> Understand why an algorithm works, not just code. Optimize for edge cases (empty,
+            single element).
+        </div>
+    </div>
+
+    <div class="section" id="resources">
+        <h2>Additional Resources</h2>
+        <ul>
+            <li>Books: "Introduction to Algorithms" (CLRS), "Cracking the Coding Interview".</li>
+            <li>Websites: LeetCode, GeeksforGeeks, CodeChef.</li>
+            <li>YouTube: Abdul Bari (Algorithms), Striver's DSA Sheet.</li>
+            <li>Projects: Build a search engine (Trie), Pathfinding visualizer (Graphs).</li>
+            <li>Communities: Reddit r/cscareerquestions, Stack Overflow.</li>
+        </ul>
+        <p>Practice consistently. In 3-4 years equiv, you'd have solved 2000+ problems, contributed to open-source, and
+            mentored others.</p>
+    </div>
+
+</body>
+
+</html>
